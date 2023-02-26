@@ -168,7 +168,7 @@ var Snake = (function () {
 
       if (player.x == fruit.x && player.y == fruit.y) {
         if(!fixedTail) tail++;
-        points++;
+        points +=2;
         if(points > pointsMax) pointsMax = points;
         reward = 1;
         game.RandomFruit();
