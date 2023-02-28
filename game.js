@@ -117,7 +117,7 @@ var Snake = (function () {
         if(player.y < 1) game.reset();
         if(player.y > tileCount-2) game.reset();
 
-        ctx.fillStyle = 'grey';
+        ctx.fillStyle = 'white';
         ctx.fillRect(0,0,gridSize-1,canv.height);
         ctx.fillRect(0,0,canv.width,gridSize-1);
         ctx.fillRect(canv.width-gridSize+1,0,gridSize,canv.height);
@@ -154,7 +154,7 @@ var Snake = (function () {
         ctx.fillText("(space) pause", 24, 374);
       }
 
-      ctx.fillStyle = 'green';
+      ctx.fillStyle = 'white';
       for(var i=0; i<trail.length-1; i++) {
         ctx.fillRect(trail[i].x * gridSize+1, trail[i].y * gridSize+1, gridSize-2, gridSize-2);
 
@@ -162,7 +162,7 @@ var Snake = (function () {
         if (!stopped && trail[i].x == player.x && trail[i].y == player.y){
           game.reset();
         }
-        ctx.fillStyle = 'lime';
+        ctx.fillStyle = 'white';
       }
       ctx.fillRect(trail[trail.length-1].x * gridSize+1, trail[trail.length-1].y * gridSize+1, gridSize-2, gridSize-2);
 
@@ -184,7 +184,7 @@ var Snake = (function () {
         })());
       }
 
-      ctx.fillStyle = 'red';
+      ctx.fillStyle = 'lime';
       ctx.fillRect(fruit.x * gridSize+1, fruit.y * gridSize+1, gridSize-2, gridSize-2);
 
       if(stopped) {
